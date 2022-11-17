@@ -33,7 +33,7 @@ Namespace SignallingMqtt
     ''' </summary>
     Public Class TrackSectionMessageHandler
 
-        Inherits DeviceBaseMessageHandler
+        Inherits RequestableBaseMessageHandler
 
         ''' <summary>
         ''' Track section state message created by the modbus To MQTT system
@@ -75,7 +75,7 @@ Namespace SignallingMqtt
             ' Get the name of the section
             Dim section As String = Me.getTopic()
 
-            If Me.action = DeviceActions.Input Then
+            If Me.action = MessageActions.Input Then
                 Dim msg As InputMessage = Newtonsoft.Json.JsonConvert.DeserializeObject(Of InputMessage)(Me.getMessagePayload())
                 If section.StartsWith("P") And Not section = "P" Then
                     ' This is a point section
@@ -85,7 +85,7 @@ Namespace SignallingMqtt
                     TrackSections.updateTrackSection(section, AnalogIOManager.convertVoltage(msg.value))
                 End If
             End If
-            If Me.action = DeviceActions.Request Then
+            If Me.action = MessageActions.Request Then
                 Dim msg As RequestMessage = Newtonsoft.Json.JsonConvert.DeserializeObject(Of RequestMessage)(Me.getMessagePayload())
                 Me.updateInputOverride(section, msg.inputOverride)
                 Me.updateSetPoint(section, msg.setPoint)
@@ -153,4 +153,4 @@ End Namespace
 
 -------------------------------
 
-Updated on 2022-11-15 at 15:52:06 +0000
+Updated on 2022-11-16 at 15:02:30 +0000

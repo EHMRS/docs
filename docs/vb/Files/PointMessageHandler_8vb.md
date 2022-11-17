@@ -48,7 +48,7 @@ Namespace SignallingMqtt
     ''' Handles updates of point states provided by ModBus client
     ''' </summary>
     Public Class PointMessageHandler
-        Inherits DeviceBaseMessageHandler
+        Inherits RequestableBaseMessageHandler
 
         ''' <summary>
         ''' Point state message created by the modbus to MQTT system
@@ -88,7 +88,7 @@ Namespace SignallingMqtt
             Dim point As String = Me.getTopic()
 
             ' Check what we are doing to it
-            If Me.action = DeviceActions.Input Then
+            If Me.action = MessageActions.Input Then
                 Dim msg As InputMessage =
                     DeserializeObject(Of InputMessage)(Me.getMessagePayload())
                 ' Update the point state
@@ -98,7 +98,7 @@ Namespace SignallingMqtt
                     AnalogIOManager.convertVoltage(msg.reverse)
                     )
             End If
-            If Me.action = DeviceActions.Request Then
+            If Me.action = MessageActions.Request Then
                 Dim msg As RequestMessage =
                     DeserializeObject(Of RequestMessage)(Me.getMessagePayload())
                 Me.updateOutputOverride(point, msg.outputOverride)
@@ -157,4 +157,4 @@ End Namespace
 
 -------------------------------
 
-Updated on 2022-11-15 at 15:52:06 +0000
+Updated on 2022-11-16 at 15:02:30 +0000

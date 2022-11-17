@@ -11,6 +11,7 @@ title: C:/Users/rfranks/Documents/Development/EHMR/SignallingSystem/EHMR Signall
 
 |                | Name           |
 | -------------- | -------------- |
+| enum class| **[messageIndexes](/SignallingSystem-doc/vb/Files/Definitions_8vb/#enum-messageindexes)** { Output = 0, System = 1, Override = 2} |
 | enum class| **[SignalOutputStates](/SignallingSystem-doc/vb/Files/Definitions_8vb/#enum-signaloutputstates)** { Danger = 0, Caution = 1, Clear = 2, Shunt = 3, Bypass = 4, System = -1} |
 | enum class| **[TrackSectionNames](/SignallingSystem-doc/vb/Files/Definitions_8vb/#enum-tracksectionnames)** { SectionA = 0, SectionB = 1, SectionC = 2, SectionD = 3, SectionE = 4, SectionF = 5, SectionG = 6, SectionH = 7, SectionI = 8, SectionJ = 9, SectionK = 10, SectionL = 11, SectionM = 12, SectionN = 13, SectionO = 14, SectionP = 15, SectionQ = 16, SectionDE = 17, SectionNO = 18, SectionOP = 19, SectionQ10 = 20, SectionA11 = 21, SectionF12 = 22, SectionF13 = 23, SectionNO14 = 24, SectionC19 = 25, SectionR = 26, SectionCD = 27} |
 | enum class| **[PointSectionNames](/SignallingSystem-doc/vb/Files/Definitions_8vb/#enum-pointsectionnames)** { SectionP5a = 0, SectionP5b = 1, SectionP6a = 2, SectionP6b = 3, SectionP10 = 4, SectionP11 = 5, SectionP12 = 6, SectionP13 = 7, SectionP14 = 8, SectionP19 = 9} |
@@ -53,6 +54,17 @@ title: C:/Users/rfranks/Documents/Development/EHMR/SignallingSystem/EHMR Signall
 | ReadOnly string | **[TrackSectionUnoccupiedString](/SignallingSystem-doc/vb/Files/Definitions_8vb/#variable-tracksectionunoccupiedstring)**  |
 
 ## Types Documentation
+
+### enum messageIndexes
+
+| Enumerator | Value | Description |
+| ---------- | ----- | ----------- |
+| Output | 0|   |
+| System | 1|   |
+| Override | 2|   |
+
+
+
 
 ### enum SignalOutputStates
 
@@ -534,6 +546,12 @@ ReadOnly string TrackSectionUnoccupiedString = "Unoccupied";
 
 ```csharp
 Module Definitions
+
+    Enum messageIndexes
+        Output = 0
+        System = 1
+        Override = 2
+    End Enum
     Enum SignalOutputStates
         Danger = 0
         Caution = 1
@@ -820,4 +838,4 @@ End Module
 
 -------------------------------
 
-Updated on 2022-11-15 at 15:52:05 +0000
+Updated on 2022-11-16 at 15:02:29 +0000

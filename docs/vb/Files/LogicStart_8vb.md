@@ -7,6 +7,12 @@ title: C:/Users/rfranks/Documents/Development/EHMR/SignallingSystem/EHMR Signall
 
 
 
+## Namespaces
+
+| Name           |
+| -------------- |
+| **[Newtonsoft::Json::JsonConvert](/SignallingSystem-doc/vb/Namespaces/namespaceNewtonsoft_1_1Json_1_1JsonConvert/)**  |
+
 ## Functions
 
 |                | Name           |
@@ -1140,6 +1146,7 @@ string LastLogicState;
 
 ```csharp
 Imports EHMR_Signalling_System.DigitalDeviceAddress
+Imports Newtonsoft.Json.JsonConvert
 Public Module LogicStart
     'Overides
     Public AllowDeparting As Boolean = True
@@ -1304,29 +1311,85 @@ Public Module LogicStart
     Public AirOffsetting As Boolean = False
     Public RequireButtonInputToClearSignal As Boolean = False
     Public LastLogicState As String
+
+    Private lastDirectionMessages(3) As DirectionMessage
+
+    Private Class DirectionMessage
+        Public direction As String = ""
+
+
+        Public Shared Operator =(ByVal s1 As DirectionMessage, ByVal s2 As DirectionMessage) As Boolean
+            If s1.direction = s2.direction Then
+                Return True
+            End If
+            Return False
+        End Operator
+        Public Shared Operator <>(ByVal s1 As DirectionMessage, ByVal s2 As DirectionMessage) As Boolean
+            If s1.direction = s2.direction Then
+                Return False
+            End If
+            Return True
+        End Operator
+    End Class
+
+    Friend Sub initialise()
+        For i As Integer = 0 To 2
+            lastDirectionMessages(i) = New DirectionMessage()
+        Next
+    End Sub
     Public Sub MainStartLogic()
         'Direction
-        If RuntimeConfig.config.DirectionOveride = "EastBound" Then
+        Dim localDirectionMessages(3) As DirectionMessage
+        For i As Integer = 0 To 2
+            localDirectionMessages(i) = New DirectionMessage()
+        Next
+
+        Dim now As System.DateTime = System.DateTime.Now()
+        Dim month As Integer
+        month = now.Month - 1
+
+        Dim autodir As String = RuntimeConfig.config.MonthDirection(month)
+        If autodir = "Eastbound" Then
+            localDirectionMessages(Definitions.messageIndexes.System).direction = "eastbound"
+        Else
+            localDirectionMessages(Definitions.messageIndexes.System).direction = "westbound"
+        End If
+
+        If RuntimeConfig.config.DirectionOveride = "Eastbound" Then
             EastBound = True
             WestBound = False
-        ElseIf RuntimeConfig.config.DirectionOveride = "WestBound" Then
+            localDirectionMessages(Definitions.messageIndexes.Output).direction = "eastbound"
+            localDirectionMessages(Definitions.messageIndexes.Override).direction = "eastbound"
+        ElseIf RuntimeConfig.config.DirectionOveride = "Westbound" Then
             EastBound = False
             WestBound = True
+            localDirectionMessages(Definitions.messageIndexes.Output).direction = "westbound"
+            localDirectionMessages(Definitions.messageIndexes.Override).direction = "westbound"
         ElseIf RuntimeConfig.config.DirectionOveride = "Auto" Then
-            If RuntimeConfig.config.AllowInputDirection = True And Serial.DataReadInputsArray(InputAddressEastBound) = 1 Then
+            localDirectionMessages(Definitions.messageIndexes.Override).direction = "system"
+            If localDirectionMessages(Definitions.messageIndexes.System).direction = "eastbound" Then
                 EastBound = True
                 WestBound = False
-            ElseIf RuntimeConfig.config.AllowInputDirection = True And Serial.DataReadInputsArray(InputAddressWestBound) = 1 Then
+                localDirectionMessages(Definitions.messageIndexes.Output).direction = "eastbound"
+            ElseIf localDirectionMessages(Definitions.messageIndexes.System).direction = "westbound" Then
                 EastBound = False
                 WestBound = True
-            Else
-
-
-                'DIRECTION by month goes here
-
-
+                localDirectionMessages(Definitions.messageIndexes.Output).direction = "westbound"
             End If
         End If
+        For i As Integer = 0 To 2
+            If Not localDirectionMessages(i) = lastDirectionMessages(i) Then
+                SignallingMqtt.Client.sendState(
+                    i,
+                    "direction",
+                    SerializeObject(localDirectionMessages(i))
+                    )
+                lastDirectionMessages(i).direction =
+                    localDirectionMessages(i).direction
+            End If
+        Next
+
+
         'Mode
         If RuntimeConfig.config.Mode = "Computer" Then
             Mode = "Computer"
@@ -1468,4 +1531,4 @@ End Module
 
 -------------------------------
 
-Updated on 2022-11-15 at 15:52:05 +0000
+Updated on 2022-11-16 at 15:02:29 +0000

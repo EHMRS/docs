@@ -15,6 +15,7 @@ title: Classes
 * **class [AuthentikUserRecord](/SignallingSystem-doc/vb/Classes/classAuthentikUserRecord/)** 
 * **class [Configs](/SignallingSystem-doc/vb/Classes/classConfigs/)** 
 * **class [DigitalDeviceAddress](/SignallingSystem-doc/vb/Classes/classDigitalDeviceAddress/)** 
+* **class [DirectionMessage](/SignallingSystem-doc/vb/Classes/classDirectionMessage/)** 
 * **namespace [EHMR_Signalling_System::LogicStart](/SignallingSystem-doc/vb/Namespaces/namespaceEHMR__Signalling__System_1_1LogicStart/)** 
 * **class [EastBoundComputer](/SignallingSystem-doc/vb/Classes/classEastBoundComputer/)** 
 * **class [EastBoundManual](/SignallingSystem-doc/vb/Classes/classEastBoundManual/)** 
@@ -39,7 +40,8 @@ title: Classes
     * **class [ButtonMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1ButtonMessageHandler/)** <br>Handles updates of button states provided by ModBus client 
         * **class [InputMessage](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1ButtonMessageHandler_1_1InputMessage/)** <br>Relay state message created by the modbus to MQTT system 
         * **class [RequestMessage](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1ButtonMessageHandler_1_1RequestMessage/)** <br>Button request message created by client apps 
-    * **class [DeviceBaseMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1DeviceBaseMessageHandler/)** <br>Provides a framework and common functions for message handler that are devices. 
+    * **class [DirectionMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1DirectionMessageHandler/)** 
+        * **class [RequestMessage](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1DirectionMessageHandler_1_1RequestMessage/)** <br>Request message created by client applications 
     * **class [LeverMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1LeverMessageHandler/)** <br>Lever Input State message handling class Handles updates of lever states provided by ModBus client. 
         * **class [InputMessage](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1LeverMessageHandler_1_1InputMessage/)** <br>Lever state message created by the modbus to MQTT system. 
         * **class [RequestMessage](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1LeverMessageHandler_1_1RequestMessage/)** <br>Request message created by client applications. 
@@ -51,6 +53,7 @@ title: Classes
         * **class [RequestMessage](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1PointMessageHandler_1_1RequestMessage/)** <br>Point request message created by client applications 
     * **class [RelayInputMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1RelayInputMessageHandler/)** <br>Handles updates of relay states provided over MQTT 
         * **class [InputMessage](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1RelayInputMessageHandler_1_1InputMessage/)** <br>Relay state message created by the modbus to MQTT system 
+    * **class [RequestableBaseMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1RequestableBaseMessageHandler/)** <br>Provides a framework and common functions for message handler that can be interacted with via a request. 
     * **class [SensorInputMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1SensorInputMessageHandler/)** <br>Handles updates of relay states provided by ModBus client 
         * **class [InputMessage](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1SensorInputMessageHandler_1_1InputMessage/)** <br>Sensor state message created by the modbus to MQTT system 
     * **class [SignalMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1SignalMessageHandler/)** 
@@ -78,4 +81,4 @@ title: Classes
 
 -------------------------------
 
-Updated on 2022-11-15 at 15:52:06 +0000
+Updated on 2022-11-16 at 15:02:30 +0000

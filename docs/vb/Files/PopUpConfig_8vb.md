@@ -1103,13 +1103,13 @@ Public Class PopUpConfig
         End If
     End Sub
     Private Sub BtnSetWestbound_Click(sender As Object, e As EventArgs) Handles BtnSetWestbound.Click
-        RuntimeConfig.config.DirectionOveride = "WestBound"
+        RuntimeConfig.config.DirectionOveride = "Westbound"
     End Sub
     Private Sub BtnSetSystem_Click(sender As Object, e As EventArgs) Handles BtnSetSystem.Click
         RuntimeConfig.config.DirectionOveride = "Auto"
     End Sub
     Private Sub BtnSetEastbound_Click(sender As Object, e As EventArgs) Handles BtnSetEastbound.Click
-        RuntimeConfig.config.DirectionOveride = "EastBound"
+        RuntimeConfig.config.DirectionOveride = "Eastbound"
     End Sub
     Private Sub BtnAddTrainSectionI_Click(sender As Object, e As EventArgs)
         AIStart.AISectionNOccupie = True
@@ -1186,4 +1186,4 @@ End Class
 
 -------------------------------
 
-Updated on 2022-11-15 at 15:52:05 +0000
+Updated on 2022-11-16 at 15:02:29 +0000

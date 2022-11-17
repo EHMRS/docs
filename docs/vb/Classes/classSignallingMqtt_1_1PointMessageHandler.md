@@ -10,7 +10,7 @@ summary: Handles updates of point states provided by ModBus client
 
 Handles updates of point states provided by ModBus client 
 
-Inherits from [SignallingMqtt.DeviceBaseMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1DeviceBaseMessageHandler/), [SignallingMqtt.BaseMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1BaseMessageHandler/)
+Inherits from [SignallingMqtt.RequestableBaseMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1RequestableBaseMessageHandler/), [SignallingMqtt.BaseMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1BaseMessageHandler/)
 
 ## Public Functions
 
@@ -20,23 +20,23 @@ Inherits from [SignallingMqtt.DeviceBaseMessageHandler](/SignallingSystem-doc/vb
 
 ## Additional inherited members
 
-**Protected Types inherited from [SignallingMqtt.DeviceBaseMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1DeviceBaseMessageHandler/)**
+**Protected Types inherited from [SignallingMqtt.RequestableBaseMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1RequestableBaseMessageHandler/)**
 
 |                | Name           |
 | -------------- | -------------- |
-| enum class| **[DeviceActions](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1DeviceBaseMessageHandler/#enum-deviceactions)** { Unknown, Input, Override, Request} |
+| enum class| **[MessageActions](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1RequestableBaseMessageHandler/#enum-messageactions)** { Unknown, Input, Override, Request} |
 
-**Protected Functions inherited from [SignallingMqtt.DeviceBaseMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1DeviceBaseMessageHandler/)**
-
-|                | Name           |
-| -------------- | -------------- |
-| override string | **[getTopic](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1DeviceBaseMessageHandler/#function-gettopic)**() |
-
-**Protected Attributes inherited from [SignallingMqtt.DeviceBaseMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1DeviceBaseMessageHandler/)**
+**Protected Functions inherited from [SignallingMqtt.RequestableBaseMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1RequestableBaseMessageHandler/)**
 
 |                | Name           |
 | -------------- | -------------- |
-| [DeviceActions](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1DeviceBaseMessageHandler/#enum-deviceactions) | **[action](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1DeviceBaseMessageHandler/#variable-action)**  |
+| override string | **[getTopic](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1RequestableBaseMessageHandler/#function-gettopic)**() |
+
+**Protected Attributes inherited from [SignallingMqtt.RequestableBaseMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1RequestableBaseMessageHandler/)**
+
+|                | Name           |
+| -------------- | -------------- |
+| [MessageActions](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1RequestableBaseMessageHandler/#enum-messageactions) | **[action](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1RequestableBaseMessageHandler/#variable-action)**  |
 
 **Protected Attributes inherited from [SignallingMqtt.BaseMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1BaseMessageHandler/)**
 
@@ -58,4 +58,4 @@ Handle the message
 
 -------------------------------
 
-Updated on 2022-11-15 at 15:52:04 +0000
+Updated on 2022-11-16 at 15:02:28 +0000

@@ -47,7 +47,7 @@ Namespace SignallingMqtt
     ''' @brief Lever Input State message handling class
     ''' Handles updates of lever states provided by ModBus client
     Public Class LeverMessageHandler
-        Inherits DeviceBaseMessageHandler
+        Inherits RequestableBaseMessageHandler
 
         ''' @brief Lever state message created by the modbus to MQTT system
         Private Class InputMessage
@@ -73,7 +73,7 @@ Namespace SignallingMqtt
             ' Get the name of the lever
             Dim lever As String = Me.getTopic()
 
-            If Me.action = DeviceActions.Input Then
+            If Me.action = MessageActions.Input Then
                 Dim msg As InputMessage =
                     DeserializeObject(Of InputMessage)(Me.getMessagePayload())
                 ' Update the lever state
@@ -84,7 +84,7 @@ Namespace SignallingMqtt
                     )
             End If
 
-            If Me.action = DeviceActions.Request Then
+            If Me.action = MessageActions.Request Then
                 Dim msg As RequestMessage =
                     DeserializeObject(Of RequestMessage)(Me.getMessagePayload())
                 Me.updateOutputOverride(lever, msg.outputOverride)
@@ -166,4 +166,4 @@ End Namespace
 
 -------------------------------
 
-Updated on 2022-11-15 at 15:52:05 +0000
+Updated on 2022-11-16 at 15:02:30 +0000

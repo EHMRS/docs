@@ -138,6 +138,7 @@ Public Class Main
         Power.initialise()
         Safety.initialise()
         Levers.initialise()
+        LogicStart.initialise()
         Path = GlobalConfig.config.MediaPath
         MimicBoardImagePath = Path + "\Images\MimicBoard\"
         FrameImagePath = Path + "\Images\Frame\"
@@ -458,4 +459,4 @@ End Class
 
 -------------------------------
 
-Updated on 2022-11-15 at 15:52:05 +0000
+Updated on 2022-11-16 at 15:02:29 +0000

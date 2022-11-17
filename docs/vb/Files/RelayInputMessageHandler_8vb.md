@@ -48,7 +48,7 @@ Namespace SignallingMqtt
     ''' Handles updates of relay states provided over MQTT
     ''' </summary>
     Public Class RelayInputMessageHandler
-        Inherits DeviceBaseMessageHandler
+        Inherits RequestableBaseMessageHandler
 
         ''' <summary>
         ''' Relay state message created by the modbus to MQTT system
@@ -71,7 +71,7 @@ Namespace SignallingMqtt
             ' Get the name of the relay, and the index of the relay in arrays
             Dim relay As String = Me.getTopic()
 
-            If Me.action = DeviceActions.Input Then
+            If Me.action = MessageActions.Input Then
                 Relays.UpdateRelay(
                     relay,
                     AnalogIOManager.convertVoltage(msg.value)
@@ -85,4 +85,4 @@ End Namespace
 
 -------------------------------
 
-Updated on 2022-11-15 at 15:52:06 +0000
+Updated on 2022-11-16 at 15:02:30 +0000

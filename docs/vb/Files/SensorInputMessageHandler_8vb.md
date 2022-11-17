@@ -48,7 +48,7 @@ Namespace SignallingMqtt
     ''' Handles updates of relay states provided by ModBus client
     ''' </summary>
     Public Class SensorInputMessageHandler
-        Inherits DeviceBaseMessageHandler
+        Inherits RequestableBaseMessageHandler
 
         ''' <summary>
         ''' Sensor state message created by the modbus to MQTT system
@@ -73,7 +73,7 @@ Namespace SignallingMqtt
             ' Get the topic and work out what we're handling here
             Dim sensor As String = Me.getTopic()
 
-            If Me.action = DeviceActions.Input Then
+            If Me.action = MessageActions.Input Then
                 Dim msg As InputMessage =
                     DeserializeObject(Of InputMessage)(Me.getMessagePayload())
 
@@ -118,4 +118,4 @@ End Namespace
 
 -------------------------------
 
-Updated on 2022-11-15 at 15:52:06 +0000
+Updated on 2022-11-16 at 15:02:30 +0000

@@ -10,7 +10,7 @@ summary: Provides a framework and common functions for message handlers
 
 Provides a framework and common functions for message handlers 
 
-Inherited by [SignallingMqtt.DeviceBaseMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1DeviceBaseMessageHandler/), [SignallingMqtt.OperatorMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1OperatorMessageHandler/)
+Inherited by [SignallingMqtt.OperatorMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1OperatorMessageHandler/), [SignallingMqtt.RequestableBaseMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1RequestableBaseMessageHandler/)
 
 ## Protected Attributes
 
@@ -39,4 +39,4 @@ String value of the topic prefix that was matched
 
 -------------------------------
 
-Updated on 2022-11-15 at 15:52:04 +0000
+Updated on 2022-11-16 at 15:02:28 +0000

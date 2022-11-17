@@ -40,6 +40,7 @@ Namespace SignallingMqtt
             MessageHandlers.Add("buttons", New ButtonMessageHandler())
             MessageHandlers.Add("levers", New LeverMessageHandler())
             MessageHandlers.Add("signals", New SignalMessageHandler())
+            MessageHandlers.Add("direction", New DirectionMessageHandler())
         End Sub
     End Module
 
@@ -49,4 +50,4 @@ End Namespace
 
 -------------------------------
 
-Updated on 2022-11-15 at 15:52:06 +0000
+Updated on 2022-11-16 at 15:02:30 +0000

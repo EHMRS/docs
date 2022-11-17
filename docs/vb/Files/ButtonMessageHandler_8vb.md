@@ -48,7 +48,7 @@ Namespace SignallingMqtt
     ''' Handles updates of button states provided by ModBus client
     ''' </summary>
     Public Class ButtonMessageHandler
-        Inherits DeviceBaseMessageHandler
+        Inherits RequestableBaseMessageHandler
 
         ''' <summary>
         ''' Relay state message created by the modbus to MQTT system
@@ -81,7 +81,7 @@ Namespace SignallingMqtt
             ' Get the name of the relay, and the index of the relay in arrays
             Dim button As Integer = Convert.ToInt32(Me.getTopic())
 
-            If Me.action = DeviceActions.Input Then
+            If Me.action = MessageActions.Input Then
                 Dim msg As InputMessage =
                     DeserializeObject(Of InputMessage)(Me.getMessagePayload())
 
@@ -93,7 +93,7 @@ Namespace SignallingMqtt
                     End If
                 End If
             End If
-            If Me.action = DeviceActions.Request Then
+            If Me.action = MessageActions.Request Then
                 Dim msg As RequestMessage =
                     DeserializeObject(Of RequestMessage)(Me.getMessagePayload())
 
@@ -145,4 +145,4 @@ End Namespace
 
 -------------------------------
 
-Updated on 2022-11-15 at 15:52:05 +0000
+Updated on 2022-11-16 at 15:02:29 +0000

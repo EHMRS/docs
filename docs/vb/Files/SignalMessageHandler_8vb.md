@@ -49,7 +49,7 @@ Namespace SignallingMqtt
     ''' Handles updates of point states provided by ModBus client
     ''' </summary>
     Public Class SignalMessageHandler
-        Inherits DeviceBaseMessageHandler
+        Inherits RequestableBaseMessageHandler
 
         ''' <summary>
         ''' Point request message created by client applications
@@ -75,7 +75,7 @@ Namespace SignallingMqtt
             Dim signal As String = Me.getTopic()
 
             ' Check what we are doing to it
-            If Me.action = DeviceActions.Request Then
+            If Me.action = MessageActions.Request Then
                 Dim msg As RequestMessage =
                     DeserializeObject(Of RequestMessage)(Me.getMessagePayload())
                 Me.updateOutputOverride(signal, msg.outputOverride)
@@ -135,4 +135,4 @@ End Namespace
 
 -------------------------------
 
-Updated on 2022-11-15 at 15:52:06 +0000
+Updated on 2022-11-16 at 15:02:30 +0000

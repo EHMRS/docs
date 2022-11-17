@@ -40,6 +40,7 @@ Imports MQTTnet.Client
 Imports System.IO
 Imports System.Text
 Imports System.Text.Json
+Imports Newtonsoft.Json.JsonConvert
 
 Namespace SignallingMqtt
     Module Client
@@ -160,6 +161,11 @@ Namespace SignallingMqtt
                 .WithTopic(GlobalConfig.config.mqttPrefix + "sensors/#") _
                 .Build()
             )
+            Await mqClient.SubscribeAsync(
+                New MqttTopicFilterBuilder() _
+                .WithTopic(GlobalConfig.config.mqttPrefix + "direction/#") _
+                .Build()
+            )
             connecting = False
         End Function
 
@@ -226,12 +232,27 @@ Namespace SignallingMqtt
         Private Sub sendMessage(ByVal topic As String, ByVal payload As String)
             Dim encapsulatedPayload As Object
             encapsulatedPayload =
-                Newtonsoft.Json.JsonConvert.DeserializeObject(payload)
+                DeserializeObject(payload)
             Dim message As MessageTemplate = New MessageTemplate()
             message.payload = encapsulatedPayload
             message.username = "system"
             message.source = "mainlogic"
-            publish(topic, Newtonsoft.Json.JsonConvert.SerializeObject(message))
+            publish(topic, SerializeObject(message))
+        End Sub
+
+        Public Sub sendState(
+                            ByVal type As Definitions.messageIndexes,
+                            ByVal topic As String,
+                            ByVal payload As String)
+            If type = Definitions.messageIndexes.System Then
+                sendSystemState(topic, payload)
+            End If
+            If type = Definitions.messageIndexes.Override Then
+                sendOverrideState(topic, payload)
+            End If
+            If type = Definitions.messageIndexes.Output Then
+                sendOutputState(topic, payload)
+            End If
         End Sub
 
         Public Sub sendOutputState(
@@ -261,4 +282,4 @@ End Namespace
 
 -------------------------------
 
-Updated on 2022-11-15 at 15:52:05 +0000
+Updated on 2022-11-16 at 15:02:29 +0000
