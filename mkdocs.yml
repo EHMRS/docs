@@ -114,7 +114,11 @@ nav:
     - Home: mqtt/index.md
     - Topics: mqtt/topics.md
   - Signalling System Core:
-    - Home: vb/index.md
-    - Todo: vb/Pages/todo.md
-    - Classes: vb/Classes/index.md
-    - Namespaces: vb/Namespaces/index.md
+    - Home: mainsystem/index.md
+    - Todo: mainsystem/Pages/todo.md
+    - Classes: mainsystem/Classes/index.md
+    - Namespaces: mainsystem/Namespaces/index.md
+  - Signalling Audio System:
+    - Home: audiosystem/index.md
+    #- Todo: audiosystem/Pages/todo.md
+    - Namespaces: audiosystem/Namespaces/index.md
