@@ -12,6 +12,7 @@ site_description: >-
 # Repository
 repo_name: EHMRS/SignallingSystem-doc
 repo_url: https://github.com/EHMRS/SignallingSystem-doc
+edit_uri: edit/main/docs/
 
 site_url: https://ehmrs.github.io/SignallingSystem-doc/
 
@@ -108,7 +109,10 @@ markdown_extensions:
 nav:
   - Home: 
     - Home: index.md
-    - Signalling Interface Cards: 485card/index.md
+    - Signalling Interface Cards: 485card.md
+  - MQTT:
+    - Home: mqtt/index.md
+    - Topics: mqtt/topics.md
   - Signalling System Core:
     - Home: vb/index.md
     - Todo: vb/Pages/todo.md

@@ -1,14 +1,13 @@
 ---
-title: SignallingMqtt::LeverMessageHandler
-summary: Lever Input State message handling class Handles updates of lever states provided by ModBus client. 
+title: SignallingMqtt::StationMessageHandler
 
 ---
 
-# SignallingMqtt::LeverMessageHandler
+# SignallingMqtt::StationMessageHandler
 
 
 
-Lever Input State message handling class Handles updates of lever states provided by ModBus client. 
+
 
 Inherits from [SignallingMqtt.RequestableBaseMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1RequestableBaseMessageHandler/), [SignallingMqtt.BaseMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1BaseMessageHandler/)
 
@@ -16,7 +15,7 @@ Inherits from [SignallingMqtt.RequestableBaseMessageHandler](/SignallingSystem-d
 
 |                | Name           |
 | -------------- | -------------- |
-| override [void](/SignallingSystem-doc/vb/Files/SerialPixelLeds_8vb/#variable-void) | **[handle](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1LeverMessageHandler/#function-handle)**()<br>Handle the message.  |
+| override [void](/SignallingSystem-doc/vb/Files/SerialPixelLeds_8vb/#variable-void) | **[handle](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1StationMessageHandler/#function-handle)**()<br>Handle the message  |
 
 ## Additional inherited members
 
@@ -54,8 +53,8 @@ Inherits from [SignallingMqtt.RequestableBaseMessageHandler](/SignallingSystem-d
 override void handle()
 ```
 
-Handle the message. 
+Handle the message 
 
 -------------------------------
 
-Updated on 2022-11-18 at 12:39:02 +0000
+Updated on 2022-11-18 at 12:39:03 +0000

@@ -166,6 +166,11 @@ Namespace SignallingMqtt
                 .WithTopic(GlobalConfig.config.mqttPrefix + "direction/#") _
                 .Build()
             )
+            Await mqClient.SubscribeAsync(
+                New MqttTopicFilterBuilder() _
+                .WithTopic(GlobalConfig.config.mqttPrefix + "station/#") _
+                .Build()
+            )
             connecting = False
         End Function
 
@@ -282,4 +287,4 @@ End Namespace
 
 -------------------------------
 
-Updated on 2022-11-16 at 15:02:29 +0000
+Updated on 2022-11-18 at 12:39:05 +0000

@@ -40,7 +40,7 @@ title: Classes
     * **class [ButtonMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1ButtonMessageHandler/)** <br>Handles updates of button states provided by ModBus client 
         * **class [InputMessage](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1ButtonMessageHandler_1_1InputMessage/)** <br>Relay state message created by the modbus to MQTT system 
         * **class [RequestMessage](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1ButtonMessageHandler_1_1RequestMessage/)** <br>Button request message created by client apps 
-    * **class [DirectionMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1DirectionMessageHandler/)** 
+    * **class [DirectionMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1DirectionMessageHandler/)** <br>Handle the changing of configuration of the direction of travel 
         * **class [RequestMessage](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1DirectionMessageHandler_1_1RequestMessage/)** <br>Request message created by client applications 
     * **class [LeverMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1LeverMessageHandler/)** <br>Lever Input State message handling class Handles updates of lever states provided by ModBus client. 
         * **class [InputMessage](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1LeverMessageHandler_1_1InputMessage/)** <br>Lever state message created by the modbus to MQTT system. 
@@ -58,6 +58,8 @@ title: Classes
         * **class [InputMessage](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1SensorInputMessageHandler_1_1InputMessage/)** <br>Sensor state message created by the modbus to MQTT system 
     * **class [SignalMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1SignalMessageHandler/)** 
         * **class [RequestMessage](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1SignalMessageHandler_1_1RequestMessage/)** <br>Point request message created by client applications 
+    * **class [StationMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1StationMessageHandler/)** 
+        * **class [RequestMessage](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1StationMessageHandler_1_1RequestMessage/)** <br>Request message created by client applications 
     * **class [TrackSectionMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1TrackSectionMessageHandler/)** <br>Handles updates of track section states provided by ModBus client 
         * **class [InputMessage](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1TrackSectionMessageHandler_1_1InputMessage/)** <br>Track section state message created by the modbus To MQTT system 
         * **class [RequestMessage](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1TrackSectionMessageHandler_1_1RequestMessage/)** <br>Track section request message created by client apps 
@@ -81,4 +83,4 @@ title: Classes
 
 -------------------------------
 
-Updated on 2022-11-16 at 15:02:30 +0000
+Updated on 2022-11-18 at 12:39:06 +0000

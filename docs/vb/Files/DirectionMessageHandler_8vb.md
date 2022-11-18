@@ -17,7 +17,7 @@ title: C:/Users/rfranks/Documents/Development/EHMR/SignallingSystem/EHMR Signall
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[SignallingMqtt::DirectionMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1DirectionMessageHandler/)**  |
+| class | **[SignallingMqtt::DirectionMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1DirectionMessageHandler/)** <br>Handle the changing of configuration of the direction of travel  |
 
 ## Attributes
 
@@ -43,6 +43,9 @@ title: C:/Users/rfranks/Documents/Development/EHMR/SignallingSystem/EHMR Signall
 Imports Newtonsoft.Json.JsonConvert
 
 Namespace SignallingMqtt
+    ''' <summary>
+    ''' Handle the changing of configuration of the direction of travel
+    ''' </summary>
     Public Class DirectionMessageHandler
         Inherits RequestableBaseMessageHandler
 
@@ -115,6 +118,9 @@ Namespace SignallingMqtt
             ''' </summary>
             Public decemberDirection As String = ""
         End Class
+        ''' <summary>
+        ''' Handle the message
+        ''' </summary>
         Public Overrides Sub handle()
             ' Get the action (this should probably be moved into a different
             '                                                   function)
@@ -175,4 +181,4 @@ End Namespace
 
 -------------------------------
 
-Updated on 2022-11-16 at 15:02:29 +0000
+Updated on 2022-11-18 at 12:39:05 +0000

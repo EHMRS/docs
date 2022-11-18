@@ -1,5 +1,6 @@
 ---
 title: SignallingMqtt::DirectionMessageHandler
+summary: Handle the changing of configuration of the direction of travel 
 
 ---
 
@@ -7,7 +8,7 @@ title: SignallingMqtt::DirectionMessageHandler
 
 
 
-
+Handle the changing of configuration of the direction of travel 
 
 Inherits from [SignallingMqtt.RequestableBaseMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1RequestableBaseMessageHandler/), [SignallingMqtt.BaseMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1BaseMessageHandler/)
 
@@ -15,7 +16,7 @@ Inherits from [SignallingMqtt.RequestableBaseMessageHandler](/SignallingSystem-d
 
 |                | Name           |
 | -------------- | -------------- |
-| override [void](/SignallingSystem-doc/vb/Files/SerialPixelLeds_8vb/#variable-void) | **[handle](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1DirectionMessageHandler/#function-handle)**() |
+| override [void](/SignallingSystem-doc/vb/Files/SerialPixelLeds_8vb/#variable-void) | **[handle](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1DirectionMessageHandler/#function-handle)**()<br>Handle the message  |
 
 ## Additional inherited members
 
@@ -53,7 +54,8 @@ Inherits from [SignallingMqtt.RequestableBaseMessageHandler](/SignallingSystem-d
 override void handle()
 ```
 
+Handle the message 
 
 -------------------------------
 
-Updated on 2022-11-16 at 15:02:28 +0000
+Updated on 2022-11-18 at 12:39:02 +0000

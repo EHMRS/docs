@@ -12,7 +12,7 @@ Provides a framework and common functions for message handler that can be intera
 
 Inherits from [SignallingMqtt.BaseMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1BaseMessageHandler/)
 
-Inherited by [SignallingMqtt.ButtonMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1ButtonMessageHandler/), [SignallingMqtt.DirectionMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1DirectionMessageHandler/), [SignallingMqtt.LeverMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1LeverMessageHandler/), [SignallingMqtt.PointMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1PointMessageHandler/), [SignallingMqtt.RelayInputMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1RelayInputMessageHandler/), [SignallingMqtt.SensorInputMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1SensorInputMessageHandler/), [SignallingMqtt.SignalMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1SignalMessageHandler/), [SignallingMqtt.TrackSectionMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1TrackSectionMessageHandler/)
+Inherited by [SignallingMqtt.ButtonMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1ButtonMessageHandler/), [SignallingMqtt.DirectionMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1DirectionMessageHandler/), [SignallingMqtt.LeverMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1LeverMessageHandler/), [SignallingMqtt.PointMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1PointMessageHandler/), [SignallingMqtt.RelayInputMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1RelayInputMessageHandler/), [SignallingMqtt.SensorInputMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1SensorInputMessageHandler/), [SignallingMqtt.SignalMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1SignalMessageHandler/), [SignallingMqtt.StationMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1StationMessageHandler/), [SignallingMqtt.TrackSectionMessageHandler](/SignallingSystem-doc/vb/Classes/classSignallingMqtt_1_1TrackSectionMessageHandler/)
 
 ## Protected Types
 
@@ -87,4 +87,4 @@ The action that this message corresponds to
 
 -------------------------------
 
-Updated on 2022-11-16 at 15:02:28 +0000
+Updated on 2022-11-18 at 12:39:03 +0000
