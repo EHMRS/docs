@@ -9,8 +9,7 @@ title: Namespaces
 
 
 * **namespace [audio](/SignallingSystem-doc/audiosystem/Namespaces/namespaceaudio/)** <br>Functions handling audio. 
-* **namespace [info](/SignallingSystem-doc/audiosystem/Namespaces/namespaceinfo/)** 
-* **namespace [main](/SignallingSystem-doc/audiosystem/Namespaces/namespacemain/)** <br>Main entry point. 
+* **namespace [main](/SignallingSystem-doc/audiosystem/Namespaces/namespacemain/)** 
 * **namespace [message_handlers](/SignallingSystem-doc/audiosystem/Namespaces/namespacemessage__handlers/)** <br>Handlers for various messages. 
 * **namespace [mqtt](/SignallingSystem-doc/audiosystem/Namespaces/namespacemqtt/)** <br>MQTT Client functions. 
 
@@ -18,4 +17,4 @@ title: Namespaces
 
 -------------------------------
 
-Updated on 2022-11-18 at 16:18:58 +0000
+Updated on 2022-11-18 at 16:49:24 +0000

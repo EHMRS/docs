@@ -70,6 +70,18 @@ def on_connect(
 
 Callback on client connect. 
 
+
+
+```
+   @param client The client object
+   @param userdata Data on the user
+   @param flags Flags!
+   @param response_code Response code from the server
+
+   @return None
+```
+
+
 ### function on_message
 
 ```python
@@ -83,6 +95,17 @@ def on_message(
 
 Callback on message received. 
 
+
+
+```
+   @param client The client object
+   @param userdata Data on the user
+   @param message Object representing the message that has been received
+
+   @return None
+```
+
+
 ### function send_message
 
 ```python
@@ -95,6 +118,16 @@ def send_message(
 
 Helper function to send a message. 
 
+
+
+```
+   @param topic The topic to which to send a message
+   @param payload The payload to send in the message
+
+   @return None
+```
+
+
 ### function prep_payload
 
 ```python
@@ -105,6 +138,15 @@ def prep_payload(
 ```
 
 Helper function to prepare the wrapper for the message. 
+
+
+
+```
+   @param data The data to wrap within the envelope
+
+   @return The wrapped message
+```
+
 
 ## Public Attributes Documentation
 
@@ -166,4 +208,4 @@ connected;
 
 -------------------------------
 
-Updated on 2022-11-18 at 16:18:58 +0000
+Updated on 2022-11-18 at 16:49:24 +0000
