@@ -1,0 +1,26 @@
+name: Publish docs via GitHub Pages
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Deploy docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v2
+
+      - name: Deploy docs
+        runs:
+          using: 'docker'
+          image: 'ghcr.io/ehmrs/mkdocs-build'
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            CUSTOM_DOMAIN: optionaldomain.com
+            CONFIG_FILE: mkdocs.yml
+            EXTRA_PACKAGES: build-base
+            # GITHUB_DOMAIN: github.myenterprise.com
+            REQUIREMENTS: requirements.txt
+          

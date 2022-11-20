@@ -1,0 +1,12 @@
+[
+  {
+    "folder": "mainsystem",
+    "doxyfile": "Doxyfile-mainsystem.linux",
+    "repo": "SignallingSystem"
+  },
+  {
+    "folder": "audiosystem",
+    "doxyfile": "Doxyfile-audiosystem",
+    "repo": "AudioSystem"
+  }
+]
