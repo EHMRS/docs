@@ -160,3 +160,7 @@ cython_debug/
 #.idea/
 
 _build/
+
+# doxygen output
+docs/mainsystem
+docs/audiosystem
