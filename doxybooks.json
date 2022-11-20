@@ -7,6 +7,6 @@
   {
     "folder": "audiosystem",
     "doxyfile": "Doxyfile-audiosystem",
-    "repo": "AudioSystem"
+    "repo": "signalling-audio"
   }
 ]
