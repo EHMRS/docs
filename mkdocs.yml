@@ -10,11 +10,11 @@ site_description: >-
   Documentation around the East Herts Miniature Railway S&T environment
 
 # Repository
-repo_name: EHMRS/SignallingSystem-doc
-repo_url: https://github.com/EHMRS/SignallingSystem-doc
+repo_name: EHMRS/docs
+repo_url: https://github.com/EHMRS/docs
 edit_uri: edit/main/docs/
 
-site_url: https://ehmrs.github.io/SignallingSystem-doc/
+site_url: https://ehmrs.github.io/docs/
 
 docs_dir: './docs'
 
