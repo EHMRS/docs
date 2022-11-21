@@ -1,6 +1,6 @@
 # TIA485 Signalling Interface Cards
 
-The system interfaces with the real world using a series of RS485 interface
+The system interfaces with the real world using a series of TIA485 interface
 cards. These cards are designed in a flexible manner to allow usage across the
 site and the future extension.
 
@@ -19,11 +19,17 @@ including:
 - Programming connector
 - Additional breakout headers
 
+#### Schematic
+[Click here to see the schematic](./SCH_Rear-Card_2022-11-21.pdf)
+
 ### Front board
 The front board includes all the delicate electronics, and will be easily
 swappable. The boards have been designed in such a way as all the configuration
 is done on the rear board, meaning when a front board is replaced there are no
 additional steps to get the board up and running.
+
+#### Schematic
+[Click here to see the schematic](./SCH_Front-Card_2022-11-21.pdf)
 
 ## Analog inputs
 Analog inputs are provided by a `74HC4067` chip. This allows a single analog pin
@@ -31,7 +37,7 @@ to read 16 inputs using a set of four address pins.
 
 ### Voltage division
 The input to each of the analog mux channels goes through a voltage divider to
-bring a potential 50v down to 5v. 50v was chosen to accomodate the highest
+bring a potential 50v down to 5v. 50v was chosen to accommodate the highest
 voltage expected in the field: 48v.
 
 ## Digital Outputs

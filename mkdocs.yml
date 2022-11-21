@@ -3,18 +3,18 @@
 # for ideas.
 
 # Project information
-site_name: East Herts Miniature Railway S&T
+site_name: East Herts Miniature Railway
 
 site_author: "Richard Franks, Tom Martin"
 site_description: >-
   Documentation around the East Herts Miniature Railway S&T environment
 
 # Repository
-repo_name: EHMRS/docs
-repo_url: https://github.com/EHMRS/docs
+repo_name: EHMRS/emhrs.github.io
+repo_url: https://github.com/EHMRS/ehmrs.github.io
 edit_uri: edit/main/docs/
 
-site_url: https://ehmrs.github.io/docs/
+site_url: https://ehmrs.github.io/
 
 docs_dir: './docs'
 
@@ -73,7 +73,16 @@ plugins:
   # - minify:
   #   minify_html: true
 
-
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/EHMRS
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/EHMRS
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/user/EHMRS
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/ehmrs
 
 # Extensions
 markdown_extensions:
@@ -109,16 +118,17 @@ markdown_extensions:
 nav:
   - Home: 
     - Home: index.md
-    - Signalling Interface Cards: 485card.md
+    #- Signalling System Overview: overview.md
+    - Signalling Interface Cards: 485card/index.md
   - MQTT:
-    - Home: mqtt/index.md
+    - MQTT: mqtt/index.md
     - Topics: mqtt/topics.md
   - Signalling System Core:
-    - Home: mainsystem/index.md
+    - Signalling System Core: mainsystem/index.md
     - Todo: mainsystem/Pages/todo.md
     - Classes: mainsystem/Classes/index.md
     - Namespaces: mainsystem/Namespaces/index.md
   - Signalling Audio System:
-    - Home: audiosystem/index.md
+    - Signalling Audio System: audiosystem/index.md
     #- Todo: audiosystem/Pages/todo.md
     - Namespaces: audiosystem/Namespaces/index.md

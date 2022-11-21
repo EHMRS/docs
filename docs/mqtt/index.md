@@ -63,11 +63,11 @@ Signalling system, however, the following message structure is in use:
   "source": "mainlogic",
   "payload": {
     "danger": true,
-    "caution":false,
-    "clear":false,
-    "route_1":false,
-    "route_2":false,
-    "shunt":false
+    "caution": false,
+    "clear": false,
+    "route_1": false,
+    "route_2": false,
+    "shunt": false
   }
 }
 ```
