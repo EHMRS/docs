@@ -167,3 +167,6 @@ doxyoutput-*/
 # doxybook output
 docs/mainsystem
 docs/audiosystem
+
+#Draw.io
+.$*.drawio*
