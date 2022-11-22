@@ -22,6 +22,9 @@ Broadly speaking, there are seven different input and output types.
   point.
 - Relays. Some are for input detection, some for latching outputs from the
   system.
+- Levers - we have a signalling frame which contains up to 23 levers. Each lever
+  has an input for Normal and Reverse, and an output to operate the 
+  electromechanical locking.
 
 ### Output only
 

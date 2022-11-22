@@ -120,6 +120,15 @@ nav:
     - Home: index.md
     - Signalling System Overview: overview.md
     - Signalling Interface Cards: 485card/index.md
+    - Devices:
+      - Devices: devices/index.md
+      - Buttons: devices/buttons.md
+      - Frame levers: devices/levers.md
+      - Points: devices/points.md
+      - Relays: devices/relays.md
+      - Track sections: devices/sections.md
+      - Sensors: devices/sensors.md
+      - Signals: devices/signals.md
   - MQTT:
     - MQTT: mqtt/index.md
     - Topics: mqtt/topics.md

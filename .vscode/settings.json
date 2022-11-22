@@ -2,5 +2,17 @@
     "editor.rulers": [
         80
     ],
-    "cSpell.language": "en-GB"
+    "cSpell.language": "en-GB",
+    "[markdown]": {
+        "editor.fontFamily": "\"IA Writer Duo S\", monospace",
+        "editor.fontSize": 16,
+        "editor.lineHeight": 26,
+        "editor.fontLigatures": true,
+        "zenMode.centerLayout": true,
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        },
+        },
 }

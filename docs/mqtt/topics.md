@@ -5,11 +5,13 @@ All topics to do with signalling are prefixed with `signalling/`.
 The topics below show the payload part of the message. The actual message will,
 of course, be packaged within an envelope.
 
-#### Voltage values
+## Voltage values
+
 All read values in from the field are voltage values.  
 These are an integer between 0 and 1024. This equates to 0 to 50 volts.
 
 ## audio
+
 Messages to do with the playing and control of audio
 
 Platform can be 0 for both, 1 for platform 1, or 2 for platform 2
@@ -17,6 +19,7 @@ Platform can be 0 for both, 1 for platform 1, or 2 for platform 2
 ### play
 
 Play an audio clip.
+
 ```json
 {
   "audio": "approaching|aux1|aux2|aux3|departing|remembranceat|remembrancepost|remembrancepre|siding",
@@ -49,6 +52,7 @@ Notification that a specific file / audio clip has completed playing.
 ```
 
 ## buttons/&lt;id&gt;
+
 Message to do with request buttons. Output sets the halo lights
 
 ### input
@@ -94,9 +98,11 @@ Message to do with request buttons. Output sets the halo lights
 ```
 
 ## direction
+
 Direction information
 
 ### output
+
 ```json
 {
   "direction": "eastbound|westbound"
@@ -104,6 +110,7 @@ Direction information
 ```
 
 ### system
+
 ```json
 {
   "direction": "eastbound|westbound"
@@ -111,6 +118,7 @@ Direction information
 ```
 
 ### override
+
 ```json
 {
   "direction": "eastbound|westbound|system"
@@ -118,6 +126,7 @@ Direction information
 ```
 
 ### request
+
 Request both direction override, and configure month-based direction
 
 ```json
@@ -201,6 +210,7 @@ Point names are their number.
 ```
 
 ### output
+
 ```json
 {
   "normal": false,
@@ -209,6 +219,7 @@ Point names are their number.
 ```
 
 ### system
+
 ```json
 {
   "input": "normal|reverse|noreturn",
@@ -217,6 +228,7 @@ Point names are their number.
 ```
 
 ### override
+
 ```json
 {
   "input": "normal|reverse|noreturn|system",
@@ -225,6 +237,7 @@ Point names are their number.
 ```
 
 ### request
+
 ```json
 {
   "inputOverride": "normal|reverse|noreturn|system",
@@ -233,6 +246,7 @@ Point names are their number.
 ```
 
 ## relays/&lt;name&gt;
+
 This covers all output and input relays
 
 ### input
@@ -252,6 +266,7 @@ This covers all output and input relays
 ```
 
 ## sections/&lt;name&gt;
+
 Section names are their letter, or for point sections P followed by their number
 (eg `P5a`)
 
@@ -264,6 +279,7 @@ Section names are their letter, or for point sections P followed by their number
 ```
 
 ### system
+
 ```json
 {
   "state": "occupied|unoccupied|route|engineer",
@@ -274,6 +290,7 @@ Section names are their letter, or for point sections P followed by their number
 ```
 
 ### override
+
 ```json
 {
   "state": "occupied|unoccupied|engineer|system"
@@ -303,6 +320,7 @@ Section names are their letter, or for point sections P followed by their number
 ```
 
 ### system
+
 ```json
 {
   "state": "open|closed|noreturn"
@@ -331,6 +349,7 @@ Section names are their letter, or for point sections P followed by their number
 mainline signals, S followed by the number for shunt only signals
 
 ### input
+
 *not currently used, but will be implemented with the new cards*
 
 ### output
@@ -347,6 +366,7 @@ mainline signals, S followed by the number for shunt only signals
 ```
 
 ### system
+
 ```json
 {
   "output": "danger|caution|clear|shunt|noaspect",
@@ -357,6 +377,7 @@ mainline signals, S followed by the number for shunt only signals
 ```
 
 ### override
+
 ```json
 {
   "output": "danger|caution|clear|shunt|noaspect|system"
@@ -364,6 +385,7 @@ mainline signals, S followed by the number for shunt only signals
 ```
 
 ### request
+
 ```json
 {
   "outputOverride": "danger|caution|clear|shunt|noaspect|system",
@@ -382,4 +404,3 @@ mainline signals, S followed by the number for shunt only signals
   "allowDeparting": "true|false"
 }
 ```
-
