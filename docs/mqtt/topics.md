@@ -196,6 +196,24 @@ Request both direction override, and configure month-based direction
 }
 ```
 
+## messages/add
+
+```json
+{
+  "type": "error|trts|info",
+  "message": "message text"
+}
+```
+
+## messages/remove
+
+```json
+{
+  "type": "error|trts|info",
+  "message": "message text"
+}
+```
+
 ## points/&lt;name&gt;
 
 Point names are their number.
