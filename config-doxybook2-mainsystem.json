@@ -1,5 +1,5 @@
 {
-  "baseUrl": "/docs/mainsystem/",
+  "baseUrl": "/mainsystem/",
   "indexInFolders": true,
   "linkSuffix": "/",
   "indexClassesName": "index",
